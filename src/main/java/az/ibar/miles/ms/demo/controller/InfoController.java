@@ -21,6 +21,8 @@ public class InfoController {
 
     @PostMapping("/personal-info")
     public ResponseEntity<InfoDTO> savePersInfo(@RequestBody PersonalInfoReq req){
+        System.err.println(req);
+        System.err.println(mapper.personalInfoReqToDTO(req));
         return ResponseEntity.status(HttpStatus.CREATED).body(infoService.savePersInfo(mapper.personalInfoReqToDTO(req)));
     }
 
@@ -31,7 +33,7 @@ public class InfoController {
 
     @PutMapping("/delivery-info/{id}")
     public ResponseEntity<InfoDTO> updateDeliveryInfo(@PathVariable Long id, @RequestBody DeliveryInfoReq req){
-        return ResponseEntity.status(HttpStatus.OK).body(infoService.updateContactInfo(id, mapper.deliveryInfoReqToDTO(req)));
+        return ResponseEntity.status(HttpStatus.OK).body(infoService.updateDeliveryInfo(id, mapper.deliveryInfoReqToDTO(req)));
     }
 
 }

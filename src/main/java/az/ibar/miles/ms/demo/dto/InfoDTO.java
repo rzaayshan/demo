@@ -12,18 +12,18 @@ public class InfoDTO {
     private String name;
     private String surname;
     private String patronymic;
-    private Date birth_date;
+    private Date birthDate;
     private Gender gender;
     private Citizen citizen;
-    private String id_no;
-    private String photo_front;
-    private String photo_back;
+    private String idNo;
+    private String photoFront;
+    private String photoBack;
     private String code;
     private String phone;
     private String email;
     private String city;
     private String address;
-    private String del_city;
-    private String del_address;
-    private String del_branch;
+    private String delCity;
+    private String delAddress;
+    private String delBranch;
 }

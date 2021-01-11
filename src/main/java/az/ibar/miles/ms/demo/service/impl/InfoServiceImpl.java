@@ -21,6 +21,7 @@ public class InfoServiceImpl implements InfoService {
     public InfoDTO savePersInfo(PersonalInfoDTO personalInfoDTO) {
         Info info = new Info();
         mapper.updateInfoFromPersonalInfoDTO(personalInfoDTO, info);
+        System.err.println(info);
         Info saved = repo.save(info);
         return mapper.infoToDto(saved);
     }
@@ -29,7 +30,10 @@ public class InfoServiceImpl implements InfoService {
     public InfoDTO updateContactInfo(Long id, ContactInfoDTO contactInfoDTO) {
         Info info = repo.findById(id).orElseThrow(RuntimeException::new);
         mapper.updateInfoFromContactInfoDTO(contactInfoDTO, info);
+        System.err.println("contact");
+        System.err.println(info);
         Info saved = repo.save(info);
+        System.err.println("after save"+saved);
         return mapper.infoToDto(saved);
     }
 
@@ -37,7 +41,10 @@ public class InfoServiceImpl implements InfoService {
     public InfoDTO updateDeliveryInfo(Long id, DeliveryInfoDTO deliveryInfoDTO) {
         Info info = repo.findById(id).orElseThrow(RuntimeException::new);
         mapper.updateInfoFromDeliveryInfoDTO(deliveryInfoDTO, info);
+        System.err.println("delivery");
+        System.err.println(info);
         Info saved = repo.save(info);
+        System.err.println("after save"+saved);
         return mapper.infoToDto(saved);
     }
 
