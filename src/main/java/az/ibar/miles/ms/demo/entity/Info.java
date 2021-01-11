@@ -3,6 +3,7 @@ package az.ibar.miles.ms.demo.entity;
 
 import az.ibar.miles.ms.demo.enums.Citizen;
 import az.ibar.miles.ms.demo.enums.Gender;
+import az.ibar.miles.ms.demo.enums.Step;
 import lombok.Data;
 import lombok.Setter;
 
@@ -33,19 +34,20 @@ public class Info {
     @Size(min = 2, max=50)
     @Pattern(regexp="^[A-Za-z]*$")
     private String patronymic;
-    private Date birth_date;
+    private Date birthDate;
     private Gender gender;
     private Citizen citizen;
-    private String id_no;
-    private String photo_front;
-    private String photo_back;
+    private String idNo;
+    private String photoFront;
+    private String photoBack;
     private String code;
     private String phone;
     private String email;
     private String city;
     private String address;
-    private String del_city;
-    private String del_address;
-    private String del_branch;
+    private String delCity;
+    private String delAddress;
+    private String delBranch;
+    private Step step;
 
 }

@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class DeliveryInfoReq {
-    private String del_city;
-    private String del_address;
-    private String del_branch;
+    private String delCity;
+    private String delAddress;
+    private String delBranch;
 }
